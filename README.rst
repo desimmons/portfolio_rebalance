@@ -34,11 +34,27 @@ portfolio_rebalance
 ===================
 
 
-    Add a short description here!
+    Understand how to rebalance your UK Vanguard portfolio using switch procedures.
 
 
-A longer description of your project goes here...
+This file performs portfolio rebalancing calculations, presenting the results
+confluent with Vanguard Switch procedures. It _does not_ interact directly with 
+your Vanguard account. For example, if you hold
+assets "A", "B", and "C" on Vanguard, each with total values in your
+portfolio of 2000, 3000, and 4000, respectively. By running:
+`rebalance A 2000 B 3000 C 4000`
+You will be presented with:
+`{'A': 1.0, 'B': 0.0, 'C': -0.25}`,
+indicating that you should sell 25% of "C", placing 100% of the sale
+into "A" and 0% into "B".
 
+
+Install and run
+===============
+
+1. Ensure you have `pip` installed
+2. `pip install .`
+3. `rebalance <Asset A> <Total value of asset A in your portfolio> ... <Asset Z> <Total value of asset Z in your portfolio>
 
 .. _pyscaffold-notes:
 
